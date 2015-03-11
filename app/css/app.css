@@ -1,0 +1,40 @@
+body {
+	margin-top: 50px;
+}
+
+.list-group-item > .fa.pull-right {
+	margin-top: 0.3em;
+	opacity: 0.3;
+}
+
+.navbar-collapse {
+	padding: 0;
+	box-shadow: none;
+	border-top-width: 0;
+	border-top-style: none;
+}
+
+.navbar-collapse.collapse {
+	display: block;
+	visibility: visible;
+}
+
+.navbar-nav {
+	margin: 0;
+}
+
+.navbar-nav > li {
+	float: left;
+}
+
+.navbar-nav > li > a {
+	padding: 15px;
+}
+
+.navbar-nav.navbar-right:last-child {
+	margin-right: -15px;
+}
+
+.navbar-right {
+	float: right;
+}
