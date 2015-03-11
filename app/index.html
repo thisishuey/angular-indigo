@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us" data-ng-app="angular-indigo">
+<html lang="en-us" data-ng-app="angularIndigo">
 	<head>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,27 +16,19 @@
 		<![endif]-->
 	</head>
 	<body role="document">
-		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="navbar-top">
 			<div class="navbar-header">
 				<a class="navbar-brand" href="#"><span class="fa fa-home"></span> Angular Indigo</a>
 			</div>
 		</nav>
-		<div role="main">
-			<div class="list-group">
-				<a href="#/" class="list-group-item"><span class="fa fa-folder-open"></span> Living Room<span class="fa fa-chevron-right pull-right"></span></a>
-				<a href="#/" class="list-group-item"><span class="fa fa-folder-open"></span> Dining Room<span class="fa fa-chevron-right pull-right"></span></a>
-				<a href="#/" class="list-group-item"><span class="fa fa-folder-open"></span> Master Bedroom<span class="fa fa-chevron-right pull-right"></span></a>
-				<a href="#/" class="list-group-item"><span class="fa fa-folder-open"></span> Guest Bedroom<span class="fa fa-chevron-right pull-right"></span></a>
-				<a href="#/" class="list-group-item"><span class="fa fa-folder-open"></span> Exterior<span class="fa fa-chevron-right pull-right"></span></a>
-			</div>
-		</div>
-		<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
-			<div id="navbar" class="navbar-collapse collapse">
+		<div role="main" data-ng-view></div>
+		<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation" id="navbar-bottom">
+			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav text-center">
-					<li class="active"><a href="#/"><span class="fa fa-lightbulb-o fa-2x"></span><br>Devices</a></li>
-					<li><a href="#/"><span class="fa fa-cogs fa-2x"></span><br>Actions</a></li>
-					<li><a href="#/"><span class="fa fa-code fa-2x"></span><br>Variables</a></li>
-					<li><a href="#/"><span class="fa fa-sitemap fa-2x"></span><br>Control Pages</a></li>
+					<li><a href="#/devices"><span class="fa fa-lightbulb-o fa-2x"></span><br>Devices</a></li>
+					<li><a href="#/actions"><span class="fa fa-cogs fa-2x"></span><br>Actions</a></li>
+					<li><a href="#/variables"><span class="fa fa-code fa-2x"></span><br>Variables</a></li>
+					<li><a href="#/pages"><span class="fa fa-sitemap fa-2x"></span><br>Pages</a></li>
 				</ul>
 			</div>
 		</nav>
