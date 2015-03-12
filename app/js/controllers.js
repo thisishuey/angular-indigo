@@ -9,7 +9,7 @@
 	devicesModule.config(['$routeProvider', function ($routeProvider) {
 
 		$routeProvider.when('/devices', {
-			templateUrl: 'devices',
+			templateUrl: 'devices.html',
 			controller: 'DevicesController'
 		});
 
@@ -20,6 +20,27 @@
 		'$scope',
 		'$routeParams',
 		function ($http, $scope, $routeParams) {
+
+			$scope.devices = {};
+
+			var devicesURL = '/devices.json';
+
+			$http.get(devicesURL).success(function (devices) {
+
+				for (var i = 0; i < devices.length; i++) {
+					$http.get(devices[i].restURL).success(function (device) {
+						if (typeof($scope.devices[device.folderID]) === 'undefined') {
+							$scope.devices[device.folderID] = {};
+						}
+						$scope.devices[device.folderID][device.name] = device;
+						// console.log('/' + device.restParent + '/' + encodeURIComponent(device.name).replace(/['()]/g, escape) + '.json');
+					});
+				}
+
+				console.log($scope.devices);
+
+			});
+
 		}
 	]);
 
@@ -30,7 +51,7 @@
 	actionsModule.config(['$routeProvider', function ($routeProvider) {
 
 		$routeProvider.when('/actions', {
-			templateUrl: 'actions',
+			templateUrl: 'actions.html',
 			controller: 'ActionsController'
 		});
 
@@ -51,7 +72,7 @@
 	variablesModule.config(['$routeProvider', function ($routeProvider) {
 
 		$routeProvider.when('/variables', {
-			templateUrl: 'variables',
+			templateUrl: 'variables.html',
 			controller: 'VariablesController'
 		});
 
@@ -72,7 +93,7 @@
 	pagesModule.config(['$routeProvider', function ($routeProvider) {
 
 		$routeProvider.when('/pages', {
-			templateUrl: 'pages',
+			templateUrl: 'pages.html',
 			controller: 'PagesController'
 		});
 
