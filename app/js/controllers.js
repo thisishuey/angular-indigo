@@ -29,7 +29,7 @@
 
 				for (var i = 0; i < devices.length; i++) {
 					$http.get(devices[i].restURL).success(function (device) {
-						if (typeof($scope.devices[device.folderID]) === 'undefined') {
+						if (!$scope.devices.hasOwnProperty(device.folderID)) {
 							$scope.devices[device.folderID] = {};
 						}
 						$scope.devices[device.folderID][device.name] = device;
