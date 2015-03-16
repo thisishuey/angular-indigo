@@ -1,0 +1,9 @@
+<div class="list-group">
+	<div class="list-group-item list-group-item-info text-center indigo-type-supports-on-off" ng-click="toggle(deviceID);" ng-show="devices[deviceID].typeSupportsOnOff"><strong>Toggle</strong></div>
+	<div class="list-group-item list-group-item-success text-center indigo-type-supports-on-off" ng-click="turnOn(deviceID);" ng-show="devices[deviceID].typeSupportsOnOff"><strong>Turn On</strong></div>
+	<div class="list-group-item list-group-item-danger text-center indigo-type-supports-on-off" ng-click="turnOff(deviceID);" ng-show="devices[deviceID].typeSupportsOnOff"><strong>Turn Off</strong></div>
+	<div class="list-group-item text-center indigo-type-supports-dim" ng-show="devices[deviceID].typeSupportsDim">
+		<select ng-model="devices[deviceID].brightness" ng-options="percentage as percentage + '%' for percentage in percentages" ng-change="setBrightness(deviceID, devices[deviceID].brightness);"></select>
+	</div>
+	<div class="list-group-item" ng-repeat="(key, value) in devices[deviceID]">{{ key }}: {{ value }}</div>
+</div>

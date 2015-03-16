@@ -1,0 +1,7 @@
+<div class="list-group">
+	<a href="#/devices/{{ folderID }}" class="list-group-item" data-ng-repeat="(folderID, deviceIDs) in folders" ng-show="folderLabels[folderID] || folderLabels[folderID] !== false">
+		<span class="btn btn-xs btn-link fa fa-folder-open"></span>
+		{{ folderLabels[folderID] ? folderLabels[folderID] : folderID }}
+		<span class="btn btn-xs btn-link fa fa-chevron-right pull-right"></span>
+	</a>
+</div>

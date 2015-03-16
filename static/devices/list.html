@@ -1,0 +1,7 @@
+<div class="list-group">
+	<a href="#/devices/{{ folderID }}/{{ deviceID }}" class="list-group-item" data-ng-repeat="deviceID in folders[folderID]" ng-show="devices[deviceID].displayInUI">
+		<button class="btn btn-xs fa" ng-class="{'btn-link fa-lightbulb-o': devices[deviceID].typeSupportsOnOff && !devices[deviceID].isOn, 'btn-primary fa-lightbulb-o': devices[deviceID].typeSupportsOnOff && devices[deviceID].isOn, 'btn-link fa-tachometer': devices[deviceID].typeSupportsHVAC}" ng-click="toggle(deviceID); $event.preventDefault();"></button>
+		{{ devices[deviceID].name }}
+		<span class="pull-right" ng-if="devices[deviceID].typeSupportsDim && devices[deviceID].brightness > 0">{{ devices[deviceID].brightness }}%</span>
+	</a>
+</div>

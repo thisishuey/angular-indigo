@@ -1,0 +1,25 @@
+body {
+	margin-top: 50px;
+	margin-bottom: 63px;
+}
+
+.fa-chevron-right.pull-right {
+	margin-top: 2px;
+	margin-right: -5px;
+	opacity: 0.3;
+}
+
+.btn-link.fa:hover {
+	text-decoration: none;
+}
+
+.navbar .navbar-header {
+	display: inline-block;
+	float: none;
+	vertical-align: top;
+	margin: 0 auto;
+}
+
+.navbar {
+	text-align: center;
+}
